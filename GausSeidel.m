@@ -13,7 +13,7 @@ while error > tol && k < 1000
     for i = 2:n
        
         sum1 = A(i,1:i-1)*xn(1:i-1,1);
-        sum2 = A(i,i+1:n)*xn(i+1:n,1);
+        sum2 = A(i,i+1:n)*x0(i+1:n,1);
         xn(i,1) = (1/A(i,i))*(b(i)-sum1-sum2);
 
     end
